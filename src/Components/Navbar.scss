@@ -1,0 +1,12 @@
+.navbar {
+  background-color: rgb(72, 73, 97);
+  color: white;
+  padding: 5px 5px;
+  gap: 10px;
+  display: flex;
+  .navItem {
+    &:hover {
+      color: cyan;
+    }
+  }
+}

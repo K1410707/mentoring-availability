@@ -1,0 +1,22 @@
+.header {
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  display: flex;
+  flex-wrap: wrap;
+
+  .leftPanel {
+    flex: 90%;
+  }
+  .rightPanel {
+    flex: 10%;
+    align-content: right;
+    .accountView {
+      text-align: right;
+      &:hover {
+        color: blue;
+        font-size: 105%;
+      }
+    }
+  }
+}
