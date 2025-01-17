@@ -4,7 +4,9 @@
   padding: 5px 5px;
   gap: 10px;
   display: flex;
-  .navItem {
+  .navItem a{
+    color:white;
+    text-decoration: none;
     &:hover {
       color: cyan;
     }

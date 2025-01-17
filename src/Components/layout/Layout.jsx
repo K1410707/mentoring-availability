@@ -3,12 +3,12 @@ import Header from "./Header.jsx";
 import Footer from "./Footer.jsx";
 import Navbar from "./Navbar.jsx";
 
-function Layout() {
+function Layout(props) {
   return (
-    <div className="layout">
-      <Header />
+    <div className="layoutContainer">
+      <Header loggedInUser={props.loggedInUser}/>
       <Navbar />
-      <div>homepage</div>
+      <main>{props.children}</main>
       <Footer />
     </div>
   );
