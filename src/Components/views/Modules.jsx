@@ -185,7 +185,7 @@ function Modules() {
         <p className="moduleName">{workshop.WorkshopModuleName}</p>
         <p className="moduleDay">
           {" "}
-          {weekDay[workshop.WorkshopDay]} - {workshop.WorkshopStarttime}{" "}
+          {weekDay[workshop.WorkshopDay]} - {workshop.WorkshopStarttime}
         </p>
         <p>{DateNumber(newDate)}</p>
         <p className="moduleLocation">{workshop.WorkshopLocationName}</p>
@@ -220,7 +220,7 @@ function Modules() {
               let workshophours = parseInt(
                 workshop.WorkshopStarttime.substring(0, 2)
               );
-              let time = durationcalc(
+              let endTime = durationcalc(
                 workshopminutes,
                 workshophours,
                 workshop.WorkshopDuration
@@ -232,7 +232,7 @@ function Modules() {
                     <p className="moduleDay">
                       {" "}
                       {weekDay[workshop.WorkshopDay]} -{" "}
-                      {workshop.WorkshopStarttime}{" "}
+                      {workshop.WorkshopStarttime} - {endTime}
                     </p>
                     <p className="moduleLocation">
                       {workshop.WorkshopLocationName}
