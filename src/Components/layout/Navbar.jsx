@@ -13,6 +13,9 @@ function Navbar() {
       <div className="navItem">
       <NavLink to="/availability">My Availability</NavLink>
       </div>
+      <div className="navItem">
+        <NavLink to="/timetable">My Timetable</NavLink>
+      </div>
     </nav>
   );
 }

@@ -1,0 +1,50 @@
+.timetable {
+    display: grid;
+    grid-template-columns: 100px repeat(5, 1fr);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .headerRow {
+    display: contents;
+  }
+  
+  .timeHeader {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    text-align: center;
+    border-right: 1px solid #ddd;
+    padding: 10px;
+  }
+  
+  .dayHeader {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .timeRow {
+    display: contents;
+  }
+  
+  .timeSlot {
+    background-color: #fafafa;
+    text-align: center;
+    border-right: 1px solid #ddd;
+    padding: 10px;
+    font-weight: bold;
+  }
+  
+  .daySlot {
+    border: 1px solid #ddd;
+    padding: 5px;
+    min-height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  
