@@ -2,117 +2,182 @@ import { CardContainer, Card } from "../UI/Card.jsx";
 import "./Modules.scss";
 
 function Modules() {
-  /*const modulelist = [
+  const listOfLevel4Workshops = [
     {
-      ModuleID: 1,
-      ModuleName: "Games Programming",
-      ModuleCode: "CI2270",
-      ModuleLevel: 4,
-      ModuleLeaderID: 1,
-      ModuleImageURL:
-        "https://images.freeimages.com/images/small-previews/9b8/electronic-components-2-1242738.jpg",
+      WorkshopID: 1,
+      WorkshopModuleID: 2,
+      WorkshopModuleName: "CI4105 Programming 1",
+      WorkshopSize: 230,
+      WorkshopTeachingblockID: 2,
+      WorkshopTeachingblockName: "Teaching Block 2",
+      WorkshopDay: 4,
+      WorkshopStarttime: "12:00",
+      WorkshopDuration: 120,
+      WorkshopLocationID: 1,
+      WorkshopLocationName: "PRSB2021-23",
     },
     {
-      ModuleID: 2,
-      ModuleName: "Individual Project",
-      ModuleCode: "CI7446",
-      ModuleLevel: 7,
-      ModuleLeaderID: 2,
-      ModuleImageURL:
-        "https://images.freeimages.com/images/small-previews/411/light-of-technology-1510575.jpg",
+      WorkshopID: 2,
+      WorkshopModuleID: 1,
+      WorkshopModuleName: "CI4105 Programming 1",
+      WorkshopSize: 230,
+      WorkshopTeachingblockID: 2,
+      WorkshopTeachingblockName: "Teaching Block 2",
+      WorkshopDay: 5,
+      WorkshopStarttime: "16:00",
+      WorkshopDuration: 120,
+      WorkshopLocationID: 1,
+      WorkshopLocationName: "PRSB2021-23",
+    },
+
+    {
+      WorkshopID: 3,
+      WorkshopModuleID: 2,
+      WorkshopModuleName: "Computing Fundamentals",
+      WorkshopSize: 150,
+      WorkshopTeachingblockID: 2,
+      WorkshopTeachingblockName: "Teaching Block 2",
+      WorkshopDay: 2,
+      WorkshopStarttime: "15:00",
+      WorkshopDuration: 120,
+      WorkshopLocationID: 2,
+      WorkshopLocationName: "PRSB3034-35",
     },
     {
-      ModuleID: 3,
-      ModuleName: "Database Driven Web Applications",
-      ModuleCode: "CI6388",
-      ModuleLevel: 6,
-      ModuleLeaderID: 3,
-      ModuleImageURL:
-        "https://images.freeimages.com/images/small-previews/64b/vla-1-1315506.jpg",
+      WorkshopID: 4,
+      WorkshopModuleID: 2,
+      WorkshopModuleName: "Computing Fundamentals",
+      WorkshopSize: 40,
+      WorkshopTeachingblockID: 2,
+      WorkshopTeachingblockName: "Teaching Block 2",
+      WorkshopDay: 4,
+      WorkshopStarttime: "15:00",
+      WorkshopDuration: 120,
+      WorkshopLocationID: 3,
+      WorkshopLocationName: "PRSB3017",
     },
     {
-      ModuleID: 4,
-      ModuleName: "Advanced Data Modelling",
-      ModuleCode: "CI8502",
-      ModuleLevel: 6,
-      ModuleLeaderID: 4,
-      ModuleImageURL:
-        "https://images.freeimages.com/images/small-previews/293/cable-4-1243085.jpg",
+      WorkshopID: 5,
+      WorkshopModuleID: 2,
+      WorkshopModuleName: "Computing Fundamentals",
+      WorkshopSize: 120,
+      WorkshopTeachingblockID: 2,
+      WorkshopTeachingblockName: "Teaching Block 2",
+      WorkshopDay: 5,
+      WorkshopStarttime: "09:00",
+      WorkshopDuration: 120,
+      WorkshopLocationID: 1,
+      WorkshopLocationName: "PRSB2021-23",
     },
     {
-      ModuleID: 5,
-      ModuleName: "Ethical Hacking",
-      ModuleCode: "CI7572",
-      ModuleLevel: 7,
-      ModuleLeaderID: 5,
-      ModuleImageURL:
-        "https://images.freeimages.com/images/small-previews/fa1/cable-5-1243077.jpg",
+      WorkshopID: 6,
+      WorkshopModuleID: 2,
+      WorkshopModuleName: "Computing Fundamentals",
+      WorkshopSize: 150,
+      WorkshopTeachingblockID: 2,
+      WorkshopTeachingblockName: "Teaching Block 2",
+      WorkshopDay: 5,
+      WorkshopStarttime: "12:30",
+      WorkshopDuration: 120,
+      WorkshopLocationID: 2,
+      WorkshopLocationName: "PRSB3034-35",
+    },
+
+    {
+      WorkshopID: 7,
+      WorkshopModuleID: 3,
+      WorkshopModuleName: "Requirements Analysis and Design",
+      WorkshopSize: 130,
+      WorkshopTeachingblockID: 2,
+      WorkshopTeachingblockName: "Teaching Block 2",
+      WorkshopDay: 4,
+      WorkshopStarttime: "09:00",
+      WorkshopDuration: 120,
+      WorkshopLocationID: 4,
+      WorkshopLocationName: "PRJG1009",
     },
     {
-      ModuleID: 6,
-      ModuleName: "Network and Mobile Forensics",
-      ModuleCode: "CI5068",
-      ModuleLevel: 7,
-      ModuleLeaderID: 6,
-      ModuleImageURL:
-        "https://images.freeimages.com/images/small-previews/930/towertv-3-1423238.jpg",
+      WorkshopID: 8,
+      WorkshopModuleID: 3,
+      WorkshopModuleName: "Requirements Analysis and Design",
+      WorkshopSize: 140,
+      WorkshopTeachingblockID: 2,
+      WorkshopTeachingblockName: "Teaching Block 2",
+      WorkshopDay: 4,
+      WorkshopStarttime: "16:00",
+      WorkshopDuration: 120,
+      WorkshopLocationID: 1,
+      WorkshopLocationName: "PRSB2021-23",
+    },
+
+    {
+      WorkshopID: 9,
+      WorkshopModuleID: 4,
+      WorkshopModuleName: "Professional Environments 1",
+      WorkshopSize: 150,
+      WorkshopTeachingblockID: 2,
+      WorkshopTeachingblockName: "Teaching Block 2",
+      WorkshopDay: 2,
+      WorkshopStarttime: "09:00",
+      WorkshopDuration: 120,
+      WorkshopLocationID: 1,
+      WorkshopLocationName: "PRSB2021-23",
     },
     {
-      ModuleID: 7,
-      ModuleName: "Practical Data Analyst Skills",
-      ModuleCode: "CI9213",
-      ModuleLevel: 5,
-      ModuleLeaderID: 7,
-      ModuleImageURL:
-        "https://images.freeimages.com/images/small-previews/cf5/cellphone-1313194.jpg",
+      WorkshopID: 10,
+      WorkshopModuleID: 4,
+      WorkshopModuleName: "Professional Environments 1",
+      WorkshopSize: 150,
+      WorkshopTeachingblockID: 2,
+      WorkshopTeachingblockName: "Teaching Block 2",
+      WorkshopDay: 3,
+      WorkshopStarttime: "09:00",
+      WorkshopDuration: 160,
+      WorkshopLocationID: 1,
+      WorkshopLocationName: "PRSB2021-23",
     },
     {
-      ModuleID: 8,
-      ModuleName: "Statistics in Practice",
-      ModuleCode: "CI5856",
-      ModuleLevel: 7,
-      ModuleLeaderID: 8,
-      ModuleImageURL:
-        "https://images.freeimages.com/images/small-previews/4e8/sala-de-parto-03-1432033.jpg",
-    },
-    {
-      ModuleID: 9,
-      ModuleName: "Internet Services and Protocols",
-      ModuleCode: "CI3651",
-      ModuleLevel: 7,
-      ModuleLeaderID: 9,
-      ModuleImageURL:
-        "https://images.freeimages.com/images/small-previews/6cc/monitor-2-1242535.jpg",
-    },
-    {
-      ModuleID: 10,
-      ModuleName: "High Level Game Development",
-      ModuleCode: "CI7952",
-      ModuleLevel: 5,
-      ModuleLeaderID: null,
-      ModuleImageURL:
-        "https://images.freeimages.com/images/small-previews/402/rocket-in-the-museum-1450195.jpg",
+      WorkshopID: 11,
+      WorkshopModuleID: 4,
+      WorkshopModuleName: "Professional Environments 1",
+      WorkshopSize: 150,
+      WorkshopTeachingblockID: 2,
+      WorkshopTeachingblockName: "Teaching Block 2",
+      WorkshopDay: 4,
+      WorkshopStarttime: "09:00",
+      WorkshopDuration: 160,
+      WorkshopLocationID: 1,
+      WorkshopLocationName: "PRSB2021-23",
     },
   ];
-  */
+  const weekDay = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
   return (
     <>
-      <h1>Modules</h1>
-      {/*
-      <CardContainer>
-        {modulelist.map((module) => {
-          return (
-            <div className="moduleCard" key={module.ModuleCode}>
-              <Card>
-                <p>{module.ModuleCode}</p>
-                <p>{module.ModuleName}</p>
-                <img src={module.ModuleImageURL} />
-              </Card>
-            </div>
-          );
-        })}
-      </CardContainer>
-      */}
+      <h1>My Mentoring Sessions</h1>
+      {
+        <CardContainer>
+          {listOfLevel4Workshops.map((workshop) => {
+            return (
+              <div className="moduleCard" key={workshop.WorkshopID}>
+                <Card>
+                  <p>{workshop.WorkshopModuleName}</p>
+                  <p>{workshop.WorkshopStarttime}</p>
+                  <p>{workshop.WorkshopLocationName}</p>
+                </Card>
+              </div>
+            );
+          })}
+        </CardContainer>
+      }
     </>
   );
 }
