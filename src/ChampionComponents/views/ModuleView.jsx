@@ -1,4 +1,4 @@
-import { Card } from "../UI/Card.jsx";
+import { Card } from "../../Components/UI/Card.jsx";
 import "./ModuleView.scss";
 
 function ModuleView() {
