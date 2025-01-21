@@ -1,4 +1,4 @@
-import {CardContainer, Card} from "../UI/Card.jsx";
+import { CardContainer, Card } from "../UI/Card.jsx";
 import "./Modules.scss";
 function durationcalc(workshopminutes, workshophours, wd) {
   let hours = Math.floor(wd / 60);
@@ -164,8 +164,15 @@ function Modules() {
       WorkshopLocationName: "PRSB2021-23",
     },
   ];
-
-  const weekDay = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  const weekDay = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
 
   return (
     <>
@@ -173,20 +180,18 @@ function Modules() {
       {
         <CardContainer>
           {listOfLevel4Workshops.map((workshop) => {
-            let workshopminutes = parseInt(workshop.WorkshopStarttime.substring(3, 5));
-            let workshophours = parseInt(workshop.WorkshopStarttime.substring(0, 2));
-            let time = durationcalc(workshopminutes, workshophours, workshop.WorkshopDuration);
             return (
               <div className="moduleCard" key={workshop.WorkshopID}>
                 <Card>
-                  <p className="moduleName">
-                    <b>{workshop.WorkshopModuleName}</b>
-                  </p>
+                  <p className="moduleName">{workshop.WorkshopModuleName}</p>
                   <p className="moduleDay">
                     {" "}
-                    {weekDay[workshop.WorkshopDay]} - {workshop.WorkshopStarttime} - {time}
+                    {weekDay[workshop.WorkshopDay]} -{" "}
+                    {workshop.WorkshopStarttime}{" "}
                   </p>
-                  <p className="moduleLocation">{workshop.WorkshopLocationName}</p>
+                  <p className="moduleLocation">
+                    {workshop.WorkshopLocationName}
+                  </p>
                 </Card>
               </div>
             );
