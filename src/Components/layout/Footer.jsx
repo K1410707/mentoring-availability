@@ -4,7 +4,7 @@ function Footer() {
   return (
     <div className="footer">
       <p classname="credits">
-        This app is brought to you by Team 1: Jon, Mohamed, Norbert and Peter.
+        This app is brought to you by Team 1: Jon, Mohamed, Norbert and Duc Hieu.
       </p>
     </div>
   );
