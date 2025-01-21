@@ -174,29 +174,79 @@ function Modules() {
     "Saturday",
   ];
 
+  const startDate = new Date("2024-09-16");
+
+  function moduleCard(workshop, dateIn) {
+    let newDate = new Date(dateIn);
+    console.log(newDate);
+    console.log(newDate.getDate());
+    return (
+      <Card>
+        <p className="moduleName">{workshop.WorkshopModuleName}</p>
+        <p className="moduleDay">
+          {" "}
+          {weekDay[workshop.WorkshopDay]} - {workshop.WorkshopStarttime}{" "}
+        </p>
+        <p>{DateNumber(newDate)}</p>
+        <p className="moduleLocation">{workshop.WorkshopLocationName}</p>
+      </Card>
+    );
+  }
+
+  function DateNumber(dateIn) {
+    let newDate = new Date(dateIn);
+    let dateString = "";
+    dateString = dateString.concat(newDate.getDate(), "-");
+    dateString = dateString.concat(newDate.getMonth() + 1, "-");
+    dateString = dateString.concat(newDate.getYear() + 1900);
+    return dateString;
+  }
+  function addWeek(dateIn) {
+    let newDate = new Date(dateIn);
+    newDate.setDate(newDate.getDate() + 7);
+    return newDate;
+  }
+
   return (
     <>
       <h1>My Mentoring Sessions</h1>
       {
-        <CardContainer>
-          {listOfLevel4Workshops.map((workshop) => {
-            return (
-              <div className="moduleCard" key={workshop.WorkshopID}>
-                <Card>
-                  <p className="moduleName">{workshop.WorkshopModuleName}</p>
-                  <p className="moduleDay">
-                    {" "}
-                    {weekDay[workshop.WorkshopDay]} -{" "}
-                    {workshop.WorkshopStarttime}{" "}
-                  </p>
-                  <p className="moduleLocation">
-                    {workshop.WorkshopLocationName}
-                  </p>
-                </Card>
-              </div>
-            );
-          })}
-        </CardContainer>
+        <>
+          <CardContainer>
+            {listOfLevel4Workshops.map((workshop) => {
+              let workshopminutes = parseInt(
+                workshop.WorkshopStarttime.substring(3, 5)
+              );
+              let workshophours = parseInt(
+                workshop.WorkshopStarttime.substring(0, 2)
+              );
+              let time = durationcalc(
+                workshopminutes,
+                workshophours,
+                workshop.WorkshopDuration
+              );
+              return (
+                <div className="moduleCard" key={workshop.WorkshopID}>
+                  <Card>
+                    <p className="moduleName">{workshop.WorkshopModuleName}</p>
+                    <p className="moduleDay">
+                      {" "}
+                      {weekDay[workshop.WorkshopDay]} -{" "}
+                      {workshop.WorkshopStarttime}{" "}
+                    </p>
+                    <p className="moduleLocation">
+                      {workshop.WorkshopLocationName}
+                    </p>
+                  </Card>
+                </div>
+              );
+            })}
+          </CardContainer>
+          <CardContainer>
+            {moduleCard(listOfLevel4Workshops[0], startDate)}
+            {moduleCard(listOfLevel4Workshops[0], addWeek(startDate))}
+          </CardContainer>
+        </>
       }
     </>
   );
