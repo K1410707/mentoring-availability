@@ -1,6 +1,20 @@
 import { CardContainer, Card } from "../UI/Card.jsx";
 import "./Modules.scss";
+function durationcalc(workshopminutes, workshophours, wd) {
+  let hours = Math.floor(wd / 60);
 
+  let addmin = hours * 60 - wd;
+
+  workshopminutes = Math.abs(addmin + workshopminutes);
+  //console.log(workshopminutes);
+  let wm = workshopminutes.toString();
+  if (wm === "0") {
+    wm = "00";
+  }
+
+  let time = `${workshophours + hours}:${wm}`;
+  return time;
+}
 function Modules() {
   const listOfLevel4Workshops = [
     {
@@ -160,68 +174,29 @@ function Modules() {
     "Saturday",
   ];
 
-  const startDate = new Date("2024-09-16");
-
-  function moduleCard(workshop, dateIn) {
-    let newDate = new Date(dateIn);
-    console.log(newDate);
-    console.log(newDate.getDate());
-    return (
-      <Card>
-        <p className="moduleName">{workshop.WorkshopModuleName}</p>
-        <p className="moduleDay">
-          {" "}
-          {weekDay[workshop.WorkshopDay]} - {workshop.WorkshopStarttime}{" "}
-        </p>
-        <p>{DateNumber(newDate)}</p>
-        <p className="moduleLocation">{workshop.WorkshopLocationName}</p>
-      </Card>
-    );
-  }
-
-  function DateNumber(dateIn) {
-    let newDate = new Date(dateIn);
-    let dateString = "";
-    dateString = dateString.concat(newDate.getDate(), "-");
-    dateString = dateString.concat(newDate.getMonth() + 1, "-");
-    dateString = dateString.concat(newDate.getYear() + 1900);
-    return dateString;
-  }
-  function addWeek(dateIn) {
-    let newDate = new Date(dateIn);
-    newDate.setDate(newDate.getDate() + 7);
-    return newDate;
-  }
-
   return (
     <>
       <h1>My Mentoring Sessions</h1>
       {
-        <>
-          <CardContainer>
-            {listOfLevel4Workshops.map((workshop) => {
-              return (
-                <div className="moduleCard" key={workshop.WorkshopID}>
-                  <Card>
-                    <p className="moduleName">{workshop.WorkshopModuleName}</p>
-                    <p className="moduleDay">
-                      {" "}
-                      {weekDay[workshop.WorkshopDay]} -{" "}
-                      {workshop.WorkshopStarttime}{" "}
-                    </p>
-                    <p className="moduleLocation">
-                      {workshop.WorkshopLocationName}
-                    </p>
-                  </Card>
-                </div>
-              );
-            })}
-          </CardContainer>
-          <CardContainer>
-            {moduleCard(listOfLevel4Workshops[0], startDate)}
-            {moduleCard(listOfLevel4Workshops[0], addWeek(startDate))}
-          </CardContainer>
-        </>
+        <CardContainer>
+          {listOfLevel4Workshops.map((workshop) => {
+            return (
+              <div className="moduleCard" key={workshop.WorkshopID}>
+                <Card>
+                  <p className="moduleName">{workshop.WorkshopModuleName}</p>
+                  <p className="moduleDay">
+                    {" "}
+                    {weekDay[workshop.WorkshopDay]} -{" "}
+                    {workshop.WorkshopStarttime}{" "}
+                  </p>
+                  <p className="moduleLocation">
+                    {workshop.WorkshopLocationName}
+                  </p>
+                </Card>
+              </div>
+            );
+          })}
+        </CardContainer>
       }
     </>
   );
