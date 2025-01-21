@@ -1,50 +1,45 @@
+.timetable-container {
+  margin: 20px;
+}
+
 .timetable {
-    display: grid;
-    grid-template-columns: 100px repeat(5, 1fr);
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .headerRow {
-    display: contents;
-  }
-  
-  .timeHeader {
-    background-color: #f4f4f4;
-    font-weight: bold;
-    text-align: center;
-    border-right: 1px solid #ddd;
-    padding: 10px;
-  }
-  
-  .dayHeader {
-    background-color: #f4f4f4;
-    font-weight: bold;
-    text-align: center;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .timeRow {
-    display: contents;
-  }
-  
-  .timeSlot {
-    background-color: #fafafa;
-    text-align: center;
-    border-right: 1px solid #ddd;
-    padding: 10px;
-    font-weight: bold;
-  }
-  
-  .daySlot {
-    border: 1px solid #ddd;
-    padding: 5px;
-    min-height: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-  }
-  
+  display: grid;
+  grid-template-columns: 100px repeat(5, 1fr);
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+}
+
+.header-row {
+  display: contents;
+  font-weight: bold;
+  background-color: #f5f5f5;
+}
+
+.time-header,
+.day-header {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.time-row {
+  display: contents;
+}
+
+.time-slot {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.day-slot {
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.placeholder-card {
+  padding: 5px;
+  background-color: #eef;
+  border: 1px solid #ccc;
+}
