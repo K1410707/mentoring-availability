@@ -1,3 +1,16 @@
 div.moduleCard {
   width: 250px;
 }
+p {
+  display: flex;
+  justify-content: center;
+}
+p.moduleName {
+  padding: 0px 0px 5px 0px;
+}
+p.moduleDay {
+}
+p.moduleLocation {
+  display: flex;
+  align-items: end;
+}
