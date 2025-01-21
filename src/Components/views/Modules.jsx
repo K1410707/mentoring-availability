@@ -169,9 +169,15 @@ function Modules() {
             return (
               <div className="moduleCard" key={workshop.WorkshopID}>
                 <Card>
-                  <p>{workshop.WorkshopModuleName}</p>
-                  <p>{workshop.WorkshopStarttime}</p>
-                  <p>{workshop.WorkshopLocationName}</p>
+                  <p className="moduleName">{workshop.WorkshopModuleName}</p>
+                  <p className="moduleDay">
+                    {" "}
+                    {weekDay[workshop.WorkshopDay]} -{" "}
+                    {workshop.WorkshopStarttime}{" "}
+                  </p>
+                  <p className="moduleLocation">
+                    {workshop.WorkshopLocationName}
+                  </p>
                 </Card>
               </div>
             );
