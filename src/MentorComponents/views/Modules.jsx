@@ -1,4 +1,4 @@
-import { CardContainer, Card } from "../UI/Card.jsx";
+import { CardContainer, Card } from "../../Components/UI/Card.jsx";
 import "./Modules.scss";
 function durationcalc(workshopminutes, workshophours, wd) {
   let hours = Math.floor(wd / 60);
