@@ -209,10 +209,9 @@ function Modules() {
 
   return (
     <>
-      <h1>My Mentoring Sessions</h1>
       {
         <>
-          <h1>Available mentoring workshops</h1>
+          <h1 className="moduleHeader">Available mentoring workshops</h1>
           <CardContainer>
             {listOfLevel4Workshops.map((workshop) => {
               let workshopminutes = parseInt(
@@ -244,13 +243,14 @@ function Modules() {
             })}
           </CardContainer>
 
-          <h1>Your assigned mentoring classes</h1>
+          <h1 className="moduleHeader">Your assigned mentoring classes</h1>
           <CardContainer>
             {moduleCard(listOfLevel4Workshops[0], startDate)}
             {moduleCard(listOfLevel4Workshops[0], addWeeks(startDate, 1))}
             {moduleCard(listOfLevel4Workshops[0], addWeeks(startDate, 2))}
             {moduleCard(listOfLevel4Workshops[0], addWeeks(startDate, 3))}
           </CardContainer>
+          <a className="moduleLink" href="https://ap.heat.ac.uk/account/login?ReturnUrl=%2Ftimesheets" target="_blank">Click here to submit timesheets</a>
         </>
       }
     </>
