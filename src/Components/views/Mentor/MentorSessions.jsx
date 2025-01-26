@@ -149,10 +149,21 @@ function MentorSessions() {
       WorkshopLocationName: 'PRSB2021-23',
     },
   ];
-  
+  const weekdays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+  function moduleCard(workshop) {
+      console.log("running module card funtion");
+      return (
+        <div>
+          <p>test text</p>
+          <p className="moduleName">Workshop Name: {workshop.WorkshopModuleName}</p>
+          <p className="moduleDay">Workshop Name: {weekdays[workshop.WorkshopDay]}</p>
+        </div>
+      );
+    }
   return (
     <>
       <h1>Here we need to list a single module assigned to a student.</h1>
+      {moduleCard(listOfLevel4Workshops[1])}
     </>
   );
 }
