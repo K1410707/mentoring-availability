@@ -1,3 +1,19 @@
-div.mentorCard {
+.mentorCard {
   width: 200px;
+}
+card {
+  display: flex;
+}
+
+.mentorPhoto{
+  visibility: hidden;
+  height: 0px;
+}
+
+@media only screen and (width > 800px) {
+  // desktop view
+  .mentorPhoto{
+    visibility: visible;
+    height: auto;
+  }
 }

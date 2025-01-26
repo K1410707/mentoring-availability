@@ -1,6 +1,5 @@
 import "./MentorSessions.scss";
 import "./MentorWorkshop.jsx";
-import {MentorWorkshop} from "./MentorWorkshop.jsx";
 function MentorSessions() {
   const listOfLevel4Workshops = [
     {

@@ -1,6 +1,6 @@
 import "./Home.scss";
 
-function Home(props) {
+function Home() {
   return <h1>Hello, welcome to the Mentoring Hub homepage</h1>;
 }
 

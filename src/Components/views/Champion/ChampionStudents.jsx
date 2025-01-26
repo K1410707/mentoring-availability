@@ -783,9 +783,9 @@ function ChampionStudents() {
           return (
             <div className="mentorCard" key={mentor.UserEmail}>
               <Card>
-                <p>{mentor.UserEmail.substring(0, 8)}</p>
-                <p>{`${mentor.UserFirstname} ${mentor.UserLastname}`}</p>
-                <img src={mentor.UserImageURL} />
+                <p className="mentorEmail">{mentor.UserEmail.substring(0, 8)}</p>
+                <p className="mentorName">{`${mentor.UserFirstname} ${mentor.UserLastname}`}</p>
+                <img className="mentorPhoto" src={mentor.UserImageURL} />
               </Card>
             </div>
           );
