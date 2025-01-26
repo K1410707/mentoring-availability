@@ -11,7 +11,7 @@ function Navbar() {
         <NavLink to="/sessions">My Mentoring Sessions</NavLink>
       </div>
       <div className="navItem">
-        <NavLink to="/students">All students</NavLink>
+        <NavLink to="/mentors">Mentors List</NavLink>
       </div>
     </nav>
   );
