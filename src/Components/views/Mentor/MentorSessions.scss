@@ -1,0 +1,27 @@
+.MentorWorkshop {
+  text-justify: center;
+  text-align: center;
+  border: 5px grey solid;
+  background-color: lightgrey;
+  border-radius: 25px;
+  .WorkshopHeader {
+    background-color: darkgrey;
+    border-radius: 20px 20px 0px 0px;
+  }
+}
+@media only screen and (width > 800px) {
+  //desktop
+  .MentorWorkshop{
+    max-width: 800px;
+    margin: auto;
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 10px;
+    p{
+      padding: 0px 20px;
+    }
+  }
+}
+}
