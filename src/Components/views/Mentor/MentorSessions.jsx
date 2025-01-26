@@ -1,171 +1,172 @@
 import "./MentorSessions.scss";
-
+import "./MentorWorkshop.jsx";
+import {MentorWorkshop} from "./MentorWorkshop.jsx";
 function MentorSessions() {
   const listOfLevel4Workshops = [
     {
       WorkshopID: 1,
       WorkshopModuleID: 2,
-      WorkshopModuleName: 'CI4105 Programming 1',
+      WorkshopModuleName: "CI4105 Programming 1",
       WorkshopSize: 230,
       WorkshopTeachingblockID: 2,
-      WorkshopTeachingblockName: 'Teaching Block 2',
+      WorkshopTeachingblockName: "Teaching Block 2",
       WorkshopDay: 4,
-      WorkshopStarttime: '12:00',
+      WorkshopStarttime: "12:00",
       WorkshopDuration: 120,
       WorkshopLocationID: 1,
-      WorkshopLocationName: 'PRSB2021-23',
+      WorkshopLocationName: "PRSB2021-23",
     },
     {
       WorkshopID: 2,
       WorkshopModuleID: 1,
-      WorkshopModuleName: 'CI4105 Programming 1',
+      WorkshopModuleName: "CI4105 Programming 1",
       WorkshopSize: 230,
       WorkshopTeachingblockID: 2,
-      WorkshopTeachingblockName: 'Teaching Block 2',
+      WorkshopTeachingblockName: "Teaching Block 2",
       WorkshopDay: 5,
-      WorkshopStarttime: '16:00',
+      WorkshopStarttime: "16:00",
       WorkshopDuration: 120,
       WorkshopLocationID: 1,
-      WorkshopLocationName: 'PRSB2021-23',
+      WorkshopLocationName: "PRSB2021-23",
     },
-  
+
     {
       WorkshopID: 3,
       WorkshopModuleID: 2,
-      WorkshopModuleName: 'Computing Fundamentals',
+      WorkshopModuleName: "Computing Fundamentals",
       WorkshopSize: 150,
       WorkshopTeachingblockID: 2,
-      WorkshopTeachingblockName: 'Teaching Block 2',
+      WorkshopTeachingblockName: "Teaching Block 2",
       WorkshopDay: 2,
-      WorkshopStarttime: '15:00',
+      WorkshopStarttime: "15:00",
       WorkshopDuration: 120,
       WorkshopLocationID: 2,
-      WorkshopLocationName: 'PRSB3034-35',
+      WorkshopLocationName: "PRSB3034-35",
     },
     {
       WorkshopID: 4,
       WorkshopModuleID: 2,
-      WorkshopModuleName: 'Computing Fundamentals',
+      WorkshopModuleName: "Computing Fundamentals",
       WorkshopSize: 40,
       WorkshopTeachingblockID: 2,
-      WorkshopTeachingblockName: 'Teaching Block 2',
+      WorkshopTeachingblockName: "Teaching Block 2",
       WorkshopDay: 4,
-      WorkshopStarttime: '15:00',
+      WorkshopStarttime: "15:00",
       WorkshopDuration: 120,
       WorkshopLocationID: 3,
-      WorkshopLocationName: 'PRSB3017',
+      WorkshopLocationName: "PRSB3017",
     },
     {
       WorkshopID: 5,
       WorkshopModuleID: 2,
-      WorkshopModuleName: 'Computing Fundamentals',
+      WorkshopModuleName: "Computing Fundamentals",
       WorkshopSize: 120,
       WorkshopTeachingblockID: 2,
-      WorkshopTeachingblockName: 'Teaching Block 2',
+      WorkshopTeachingblockName: "Teaching Block 2",
       WorkshopDay: 5,
-      WorkshopStarttime: '09:00',
+      WorkshopStarttime: "09:00",
       WorkshopDuration: 120,
       WorkshopLocationID: 1,
-      WorkshopLocationName: 'PRSB2021-23',
+      WorkshopLocationName: "PRSB2021-23",
     },
     {
       WorkshopID: 6,
       WorkshopModuleID: 2,
-      WorkshopModuleName: 'Computing Fundamentals',
+      WorkshopModuleName: "Computing Fundamentals",
       WorkshopSize: 150,
       WorkshopTeachingblockID: 2,
-      WorkshopTeachingblockName: 'Teaching Block 2',
+      WorkshopTeachingblockName: "Teaching Block 2",
       WorkshopDay: 5,
-      WorkshopStarttime: '12:30',
+      WorkshopStarttime: "12:30",
       WorkshopDuration: 120,
       WorkshopLocationID: 2,
-      WorkshopLocationName: 'PRSB3034-35',
+      WorkshopLocationName: "PRSB3034-35",
     },
-  
+
     {
       WorkshopID: 7,
       WorkshopModuleID: 3,
-      WorkshopModuleName: 'Requirements Analysis and Design',
+      WorkshopModuleName: "Requirements Analysis and Design",
       WorkshopSize: 130,
       WorkshopTeachingblockID: 2,
-      WorkshopTeachingblockName: 'Teaching Block 2',
+      WorkshopTeachingblockName: "Teaching Block 2",
       WorkshopDay: 4,
-      WorkshopStarttime: '09:00',
+      WorkshopStarttime: "09:00",
       WorkshopDuration: 120,
       WorkshopLocationID: 4,
-      WorkshopLocationName: 'PRJG1009',
+      WorkshopLocationName: "PRJG1009",
     },
     {
       WorkshopID: 8,
       WorkshopModuleID: 3,
-      WorkshopModuleName: 'Requirements Analysis and Design',
+      WorkshopModuleName: "Requirements Analysis and Design",
       WorkshopSize: 140,
       WorkshopTeachingblockID: 2,
-      WorkshopTeachingblockName: 'Teaching Block 2',
+      WorkshopTeachingblockName: "Teaching Block 2",
       WorkshopDay: 4,
-      WorkshopStarttime: '16:00',
+      WorkshopStarttime: "16:00",
       WorkshopDuration: 120,
       WorkshopLocationID: 1,
-      WorkshopLocationName: 'PRSB2021-23',
+      WorkshopLocationName: "PRSB2021-23",
     },
-  
+
     {
       WorkshopID: 9,
       WorkshopModuleID: 4,
-      WorkshopModuleName: 'Professional Environments 1',
+      WorkshopModuleName: "Professional Environments 1",
       WorkshopSize: 150,
       WorkshopTeachingblockID: 2,
-      WorkshopTeachingblockName: 'Teaching Block 2',
+      WorkshopTeachingblockName: "Teaching Block 2",
       WorkshopDay: 2,
-      WorkshopStarttime: '09:00',
+      WorkshopStarttime: "09:00",
       WorkshopDuration: 120,
       WorkshopLocationID: 1,
-      WorkshopLocationName: 'PRSB2021-23',
+      WorkshopLocationName: "PRSB2021-23",
     },
     {
       WorkshopID: 10,
       WorkshopModuleID: 4,
-      WorkshopModuleName: 'Professional Environments 1',
+      WorkshopModuleName: "Professional Environments 1",
       WorkshopSize: 150,
       WorkshopTeachingblockID: 2,
-      WorkshopTeachingblockName: 'Teaching Block 2',
+      WorkshopTeachingblockName: "Teaching Block 2",
       WorkshopDay: 3,
-      WorkshopStarttime: '09:00',
+      WorkshopStarttime: "09:00",
       WorkshopDuration: 160,
       WorkshopLocationID: 1,
-      WorkshopLocationName: 'PRSB2021-23',
+      WorkshopLocationName: "PRSB2021-23",
     },
     {
       WorkshopID: 11,
       WorkshopModuleID: 4,
-      WorkshopModuleName: 'Professional Environments 1',
+      WorkshopModuleName: "Professional Environments 1",
       WorkshopSize: 150,
       WorkshopTeachingblockID: 2,
-      WorkshopTeachingblockName: 'Teaching Block 2',
+      WorkshopTeachingblockName: "Teaching Block 2",
       WorkshopDay: 4,
-      WorkshopStarttime: '09:00',
+      WorkshopStarttime: "09:00",
       WorkshopDuration: 160,
       WorkshopLocationID: 1,
-      WorkshopLocationName: 'PRSB2021-23',
+      WorkshopLocationName: "PRSB2021-23",
     },
   ];
-  const weekdays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+  const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   function moduleCard(workshop) {
-      console.log("running module card funtion");
-      return (
-        <div>
-          <p>test text</p>
-          <p className="moduleName">Workshop Name: {workshop.WorkshopModuleName}</p>
-          <p className="moduleDay">Workshop Name: {weekdays[workshop.WorkshopDay]}</p>
+    console.log("running module card funtion");
+    return (
+      <div className="MentorWorkshop">
+        <h2 className="WorkshopHeader">Your assigned workshop</h2>
+        <div className="container">
+          <p className="moduleName">{workshop.WorkshopModuleName}</p>
+          <p className="moduleDay">
+            {weekdays[workshop.WorkshopDay]} at {workshop.WorkshopStarttime}
+          </p>
+          <p className="moduleDay"> {workshop.WorkshopLocationName}</p>
         </div>
-      );
-    }
-  return (
-    <>
-      <h1>Here we need to list a single module assigned to a student.</h1>
-      {moduleCard(listOfLevel4Workshops[1])}
-    </>
-  );
+      </div>
+    );
+  }
+  return <>{moduleCard(listOfLevel4Workshops[1])}</>;
 }
 
 export default MentorSessions;
